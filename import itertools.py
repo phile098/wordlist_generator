@@ -52,7 +52,7 @@ def fonction_principale():
             
             
             ''')
-    fichier=str(input('Entrez le nom du fichier dans lequel vous enregistrez la wordlist: '))
+    fichier=str(input('Entrez le nom du fichier .txt dans lequel vous enregistrez la wordlist: '))
     if not os.path.exists(chemin+'/'+fichier):
         print('Le fichier existe pas!!!')
         exit()
@@ -69,7 +69,7 @@ def fonction_principale():
             else:
                 wordlist_nb_caractere(nbmot)
         if typedefonction==1:
-            lecture=str(input('Entrez le nom du fichier contenant les mots: '))
+            lecture=str(input('Entrez le nom du fichier .txt contenant les mots: '))
             liste=lecteur(lecture)
             if len(liste)==0:
                 print('liste vide!!')
