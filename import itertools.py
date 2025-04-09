@@ -7,6 +7,9 @@ import os
 chemin = os.path.dirname(os.path.abspath(__file__))
 
 def lecteur(fichier):
+    """
+    lit un fichier et renvoie une liste de mots"""
+
     if not os.path.exists(chemin):
         print("Le fichier n'existe pas!!")
         exit()
@@ -16,6 +19,8 @@ def lecteur(fichier):
             t.append(i.strip())
     return t
 def est_entier(valeur):
+    """
+    verifie si la valeur est un entier"""
     try:
         int(valeur) 
         return True  
@@ -23,11 +28,15 @@ def est_entier(valeur):
         return False  
 
 def genere_wordliste_liste(mot):
+    """
+    genere une wordliste a partir d'une liste de mot"""
     with open(chemin+'/'+fichier,'w') as f:
         for j in range(1, len(mot)+1):
             for i in itertools.product(mot,repeat=j):
                 f.write(''.join(i)+'\n')
 def wordlist_nb_caractere (nb):
+    """
+    genere une wordliste a partir de tous les caracteres"""
     toutcaractere = string.printable.strip()
     print(toutcaractere)
     print(len(toutcaractere))
