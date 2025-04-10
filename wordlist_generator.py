@@ -34,12 +34,12 @@ def genere_wordliste_liste(mot):
         for j in range(1, len(mot)+1):
             for i in itertools.product(mot,repeat=j):
                 f.write(''.join(i)+'\n')
-def wordlist_nb_caractere (nb):
+def wordlist_nb_caractere (nb,minimum):
     """
     genere une wordliste a partir de tous les caracteres"""
     toutcaractere = string.printable.strip()
     with open(chemin+'/'+fichier,'w') as f:
-        for j in range(1, nb+1):
+        for j in range(minimum, nb+1):
             for i in itertools.product(toutcaractere,repeat=j): 
                 f.write(''.join(i)+'\n')
 print('''
@@ -59,12 +59,18 @@ if os.path.exists(chemin+'/'+fichier):
         print('Erreur de saisie!!')
         exit()
     if typedefonction==2:
+        minimum=int(input('Entrez la taille minimum du mdp que vous voulez dans la wordlist:'))
         nbmot=int(input('Entrez la taille maximal du mdp que vous voulez dans la wordlist: '))
-        if est_entier(nbmot)==False:
+        if est_entier(nbmot)==False and est_entier(minimum)==False:
             print('Erreur de saisie!!')
             exit()
         else:
-            wordlist_nb_caractere(nbmot)
+            wordlist_nb_caractere(nbmot,minimum)
+            print('''
+****************************************
+*******Ta wordlist a été generee*******
+****************************************
+                ''')  
     if typedefonction==1:
         lecture=str(input('Entrez le nom du fichier .txt contenant les mots: '))
         liste=lecteur(lecture)
