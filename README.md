@@ -16,7 +16,15 @@ Clonez le dépôt :
 ```bash
 git clone https://github.com/phile098/wordlist_generator.git
 cd wordlist_generator
+
+```
+# Droit d'execution
+
+```bash
 chmod 777 wordlist_generator.py
 
-
+```
+#Création du fichier pour la wordlist 
+```bash
+touch mon_fichier.txt
 ```
