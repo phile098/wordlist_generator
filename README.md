@@ -24,7 +24,7 @@ cd wordlist_generator
 chmod 777 wordlist_generator.py
 
 ```
-#Création du fichier pour la wordlist 
+# Création du fichier pour la wordlist 
 ```bash
 touch mon_fichier.txt
 ```
