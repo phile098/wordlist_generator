@@ -79,7 +79,7 @@ def fonction_principale():
 
                 print('''
     ****************************************
-    *******Ta wordliste a été generee*******
+    *******Ta wordlist a été generee*******
     ****************************************
                     ''')    
 fonction_principale()
