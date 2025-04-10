@@ -15,7 +15,7 @@ Clonez le dépôt :
 
 ```bash
 git clone https://github.com/phile098/wordlist_generator.git
-cd wordlist-generator
+cd wordlist_generator
 
 
 ```
