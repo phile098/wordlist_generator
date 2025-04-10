@@ -68,7 +68,7 @@ if not os.path.exists(chemin+'/'+fichier):
     print('Le fichier existe pas!!!')
     exit()
 if os.path.exists(chemin+'/'+fichier):
-    typedefonction=int(input('Entre \n 1 si tu veux generer une wordliste a partir d une liste  de mot \n 2 si tu veux utiliser a partir de tous les caracteres \n 3 si tu veux generer un code pin \n Entrer votre choix: '))
+    typedefonction=int(input('Entre \n 1 si tu veux generer une wordlist a partir d une liste  de mot \n 2 si tu veux utiliser a partir de tous les caracteres \n 3 si tu veux generer un code pin \n Entrer votre choix: '))
     if typedefonction!=1 and typedefonction!=2  and typedefonction!=3:
         print('Erreur de saisie!!')
         exit()
@@ -112,3 +112,4 @@ if os.path.exists(chemin+'/'+fichier):
 *******Ta wordlist a été generee*******
 ****************************************
                 ''')    
+
