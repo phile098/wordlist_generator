@@ -38,8 +38,6 @@ def wordlist_nb_caractere (nb):
     """
     genere une wordliste a partir de tous les caracteres"""
     toutcaractere = string.printable.strip()
-    print(toutcaractere)
-    print(len(toutcaractere))
     with open(chemin+'/'+fichier,'w') as f:
         for j in range(1, nb+1):
             for i in itertools.product(toutcaractere,repeat=j): 
