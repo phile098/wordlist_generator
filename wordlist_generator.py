@@ -44,42 +44,40 @@ def wordlist_nb_caractere (nb):
         for j in range(1, nb+1):
             for i in itertools.product(toutcaractere,repeat=j): 
                 f.write(''.join(i)+'\n')
-def fonction_principale():
-    print('''
-    *********************************************
-    **Bienvenue dans le generateur de wordlist **       
-    *********************************************
-            
-            
-            ''')
-    fichier=str(input('Entrez le nom du fichier .txt dans lequel vous enregistrez la wordlist: '))
-    if not os.path.exists(chemin+'/'+fichier):
-        print('Le fichier existe pas!!!')
+print('''
+*********************************************
+**Bienvenue dans le generateur de wordlist **       
+*********************************************
+        
+        
+        ''')
+fichier=str(input('Entrez le nom du fichier .txt dans lequel vous enregistrez la wordlist: '))
+if not os.path.exists(chemin+'/'+fichier):
+    print('Le fichier existe pas!!!')
+    exit()
+if os.path.exists(chemin+'/'+fichier):
+    typedefonction=int(input('Entre 1 si tu veux generer une wordliste a partir d une liste  de mot ou 2 si tu veux utiliser a partir de tous les caracteres? '))
+    if typedefonction!=1 and typedefonction!=2:
+        print('Erreur de saisie!!')
         exit()
-    if os.path.exists(chemin+'/'+fichier):
-        typedefonction=int(input('Entre 1 si tu  veux generer une wordliste avec une liste  de mot ou 2 si tu veux utiliser tous les caracteres? '))
-        if typedefonction!=1 and typedefonction!=2:
+    if typedefonction==2:
+        nbmot=int(input('Entrez la taille maximal du mdp que vous voulez dans la wordlist: '))
+        if est_entier(nbmot)==False:
             print('Erreur de saisie!!')
             exit()
-        if typedefonction==2:
-            nbmot=int(input('Entrez le nombre de mot que vous voulez dans la wordlist: '))
-            if est_entier(nbmot)==False:
-                print('Erreur de saisie!!')
-                exit()
-            else:
-                wordlist_nb_caractere(nbmot)
-        if typedefonction==1:
-            lecture=str(input('Entrez le nom du fichier .txt contenant les mots: '))
-            liste=lecteur(lecture)
-            if len(liste)==0:
-                print('liste vide!!')
-                exit()
-            else:
-                genere_wordliste_liste(liste)
+        else:
+            wordlist_nb_caractere(nbmot)
+    if typedefonction==1:
+        lecture=str(input('Entrez le nom du fichier .txt contenant les mots: '))
+        liste=lecteur(lecture)
+        if len(liste)==0:
+            print('liste vide!!')
+            exit()
+        else:
+            genere_wordliste_liste(liste)
 
-                print('''
-    ****************************************
-    *******Ta wordlist a été generee*******
-    ****************************************
-                    ''')    
-fonction_principale()
+            print('''
+****************************************
+*******Ta wordlist a été generee*******
+****************************************
+                ''')    
