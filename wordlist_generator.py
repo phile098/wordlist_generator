@@ -5,6 +5,16 @@ import itertools
 import string
 import os
 chemin = os.path.dirname(os.path.abspath(__file__))
+def logo():
+    """
+    affiche le logo du programme"""
+    print(r'''                        _ _ _     _                                         _             
+ __      _____  _ __ __| | (_)___| |_ ___    __ _  ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
+ \ \ /\ / / _ \| '__/ _` | | / __| __/ _ \  / _` |/ _ \ '_ \ / _ \ '__/ _` | __/ _ \| '__|
+  \ V  V / (_) | | | (_| | | \__ \ ||  __/ | (_| |  __/ | | |  __/ | | (_| | || (_) | |   
+   \_/\_/ \___/|_|  \__,_|_|_|___/\__\___|  \__, |\___|_| |_|\___|_|  \__,_|\__\___/|_|    
+                                            |___/                                         
+          ''')
 
 def lecteur(fichier):
     """
@@ -42,6 +52,7 @@ def genere_wordliste_liste(mot):
             for i in itertools.product(mot,repeat=j):
                 f.write(''.join(i)+'\n')
 def wordlist_nb_caractere (nb,minimum):
+
     """
     genere une wordliste a partir de tous les caracteres"""
     toutcaractere = string.printable.strip()
@@ -49,6 +60,7 @@ def wordlist_nb_caractere (nb,minimum):
         for j in range(minimum, nb+1):
             for i in itertools.product(toutcaractere,repeat=j): 
                 f.write(''.join(i)+'\n')
+logo()
 print('''
 ************************************************************
 ***Bienvenue dans le generateur de wordlist              ***      
@@ -112,4 +124,3 @@ if os.path.exists(chemin+'/'+fichier):
 *******Ta wordlist a été generee*******
 ****************************************
                 ''')    
-
