@@ -28,3 +28,5 @@ chmod 777 wordlist_generator.py
 ```bash
 touch mon_fichier.txt
 ```
+# Example 
+![Mon image](/capture.png)
