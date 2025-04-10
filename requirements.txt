@@ -1,1 +1,1 @@
-Pas de prés requis
+Pas de prés requis sauf python3
