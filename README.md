@@ -14,7 +14,7 @@ Ce projet est un générateur de wordlist simple pour Linux.
 Clonez le dépôt :
 
 ```bash
-
+git clone https://github.com/phile098/wordlist_generator.git
 cd wordlist-generator
 
 
