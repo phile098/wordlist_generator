@@ -1,4 +1,6 @@
 # Générateur de Wordlist
+![Project Status](https://img.shields.io/badge/status-active-brightgreen)  
+![License](https://img.shields.io/badge/license-MIT-blue)
 ```
                         _ _ _     _                                         _             
  __      _____  _ __ __| | (_)___| |_ ___    __ _  ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
