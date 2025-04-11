@@ -9,7 +9,7 @@
    \_/\_/ \___/|_|  \__,_|_|_|___/\__\___|  \__, |\___|_| |_|\___|_|  \__,_|\__\___/|_|   
                                             |___/                                         
 ```
-Ce projet est un générateur de wordlist simple pour Linux.Avec aucun module à importer.Crée pour être le plsu simple possible.
+Ce projet est un générateur de wordlist simple pour Linux.Avec aucun module à importer.Crée pour être le plus simple possible.
 
 ## Installation
 
