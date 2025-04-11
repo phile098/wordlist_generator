@@ -5,6 +5,15 @@ import itertools
 import string
 import os
 chemin = os.path.dirname(os.path.abspath(__file__))
+def affiche():
+    global fichiertxt
+    fichiertxt=[]
+    for nom in os.listdir(chemin):
+        if nom.endswith('.txt'):
+            fichiertxt.append(nom)
+    for i in range(len(fichiertxt)):
+        print(i,':',fichiertxt[i])
+    
 def logo():
     """
     affiche le logo du programme"""
@@ -75,10 +84,14 @@ print('''
 ***près requis:python3 eet un fichier txt dans le dossier***     
 ************************************************************
         ''')
-fichier=str(input('Entrez le nom du fichier .txt dans lequel vous enregistrez la wordlist: '))
+affiche()
+num=int(input('Entrez le nummero corespondant du fichier .txt dans lequel vous enregistrez la wordlist: '))
+
+fichier=fichiertxt[num]
 if not os.path.exists(chemin+'/'+fichier):
     print('Le fichier existe pas!!!')
     exit()
+
 if os.path.exists(chemin+'/'+fichier):
     typedefonction=int(input('Entre \n 1 si tu veux generer une wordlist a partir d une liste  de mot \n 2 si tu veux utiliser a partir de tous les caracteres \n 3 si tu veux generer un code pin \n Entrer votre choix: '))
     if typedefonction!=1 and typedefonction!=2  and typedefonction!=3:
