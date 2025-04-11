@@ -36,7 +36,7 @@ def est_entier(valeur):
         return True  
     except ValueError:
         return False  
-def genere_code_pin(nbmin,nbmax):
+def genere_code_pin(nbmax,nbmin):
     """
     genere une wordliste a partir de tous les caracteres"""
     toutchiffre =['0','1','2','3','4','5','6','7','8','9']
